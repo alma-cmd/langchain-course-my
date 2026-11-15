@@ -20,7 +20,7 @@ req = urllib.request.Request(url, data=json.dumps(data).encode('utf-8'), headers
 
 try:
     with urllib.request.urlopen(req) as response:
-        print("✅ УСПЕХ! Модель работает через chat/completions:")
+        print("✅ УСПЕХ!   Модель работает через chat/completions:")
         result = json.loads(response.read().decode())
         print(result['choices'][0]['message']['content'])
 except urllib.error.HTTPError as e:
