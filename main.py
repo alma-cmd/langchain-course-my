@@ -22,9 +22,9 @@ base_template = ChatPromptTemplate([
 template =  base_template.partial(lang = "романским", tone = default_tone)
 
 text = input("Введите текст: ")
-prompt = template.format_messages(text=text)
+prompt = template.format_messages(text = text)
 
-print(template.format(text=text))
+print(template.format(text = text))
 
 #model = ChatOpenAI(
 #    model="openai/gpt-4.1-mini",

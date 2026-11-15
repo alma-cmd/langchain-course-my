@@ -14,7 +14,7 @@ try:
         data = json.loads(response.read().decode())
         all_models = [m.get("id") for m in data.get("data", []) if m.get("id")]
 
-        # Фильтруем ТОЛЬКО модели с префиксом openai/
+        # Фильтруем ТОЛЬКО модели с префиксом   openai/
         openai_models = sorted([m for m in all_models if m.startswith("openai/")])
 
         print(f"\n✅ Найдено {len(openai_models)} моделей OpenAI:")
