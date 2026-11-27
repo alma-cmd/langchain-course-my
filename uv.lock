@@ -528,6 +528,17 @@ wheels = [
 ]
 
 [[package]]
+name = "dotenv"
+version = "0.9.9"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "python-dotenv" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b2/b7/545d2c10c1fc15e48653c91efde329a790f2eecfbbf2bd16003b5db2bab0/dotenv-0.9.9-py2.py3-none-any.whl", hash = "sha256:29cf74a087b31dafdb5a446b6d7e11cbce8ed2741540e2339c69fbef92c94ce9", size = 1892, upload-time = "2025-02-19T22:15:01.647Z" },
+]
+
+[[package]]
 name = "filetype"
 version = "1.2.0"
 source = { registry = "https://pypi.org/simple" }
@@ -986,10 +997,12 @@ name = "langchain-course-my"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "dotenv" },
     { name = "langchain" },
     { name = "langchain-anthropic" },
     { name = "langchain-community" },
     { name = "langchain-core" },
+    { name = "langchain-deepseek" },
     { name = "langchain-gigachat" },
     { name = "langchain-google-genai" },
     { name = "langchain-openai" },
@@ -999,15 +1012,30 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "dotenv", specifier = ">=0.9.9" },
     { name = "langchain" },
     { name = "langchain-anthropic", specifier = ">=1.7.10" },
     { name = "langchain-community", specifier = ">=0.4.2" },
     { name = "langchain-core", specifier = ">=1.8.0" },
+    { name = "langchain-deepseek", specifier = ">=1.2.0" },
     { name = "langchain-gigachat", specifier = ">=0.5.1" },
     { name = "langchain-google-genai", specifier = ">=4.5.1" },
     { name = "langchain-openai", specifier = ">=1.7.4" },
     { name = "pydantic", specifier = ">=2.14.3" },
     { name = "python-dotenv", specifier = ">=1.2.4" },
+]
+
+[[package]]
+name = "langchain-deepseek"
+version = "1.2.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "langchain-core" },
+    { name = "langchain-openai" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/49/66/57cd23648cbabcd8ad2c307b156b3e41ab1f081f1d39221eabe363d75d43/langchain_deepseek-1.2.0.tar.gz", hash = "sha256:9da8e09585f1f897c6b633b9ec71ea2b32312a9b6c2a10240f6f575fee733a68", size = 140836, upload-time = "2026-11-15T21:34:28.326Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d8/24/c35562d188c81e983fb6ca97f7f6669db8c807df36ca1e038bd9eec8c102/langchain_deepseek-1.2.0-py3-none-any.whl", hash = "sha256:1af82f0588cd8687aa02f63cab0f014c60e66e8851c298b2b00461f89f88d859", size = 11951, upload-time = "2026-11-15T21:34:27.103Z" },
 ]
 
 [[package]]
