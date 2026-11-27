@@ -13,10 +13,10 @@ while True:
     if text == "":
         break
     human_message = HumanMessage(content=text)
-    #messages = game_template.format_messages() + history + [human_message]
+
     messages = game_template.format_messages() + history.messages + [human_message]
     response = model.invoke(messages)
-    print("🤖Бот:", response.text)
+    print("🤖Бот :", response.text)
 
     history.add_message(human_message)
     history.add_message(AIMessage(content=response.content))

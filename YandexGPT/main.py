@@ -1,5 +1,3 @@
-# from typing import cast
-
 from dotenv import load_dotenv
 from models import gpt_model
 from langchain_core.prompts import ChatPromptTemplate,  SystemMessagePromptTemplate, HumanMessagePromptTemplate
@@ -8,7 +6,7 @@ load_dotenv()
 
 base_template = ChatPromptTemplate([
     SystemMessagePromptTemplate.from_template("Твой стиль общения дружелюбный"),
-    HumanMessagePromptTemplate.from_template("Отвечай на вопрос: {text}")
+    HumanMessagePromptTemplate.from_template("Отвечай на вопрос : {text}")
 ])
 
 template = base_template.partial()
