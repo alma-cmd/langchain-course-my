@@ -5,7 +5,7 @@ from langchain_core.chat_history import InMemoryChatMessageHistory
 from prompts.game import game_template
 load_dotenv()
 model = ChatGoogleGenerativeAI(model="gemini-3.5-flash-lite", timeout=120,  max_retries=0)
-#history = []
+
 history = InMemoryChatMessageHistory()
 while True:
     text = input("Введите текст: ")
